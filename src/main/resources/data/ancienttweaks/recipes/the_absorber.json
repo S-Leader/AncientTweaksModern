@@ -1,28 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "nnn",
-    "scg",
-    "nbn"
-  ],
-  "key": {
-    "n": {
-      "item": "ancienttweaks:clam_husk"
-    },
-    "b": {
-      "item": "minecraft:bowl"
-    },
-    "s": {
-      "item": "ancienttweaks:giant_tortoise_shell"
-    },
-    "g": {
-      "item": "ancienttweaks:grand_gelatin"
-    },
-    "c": {
-      "item": "ancienttweaks:baroclaw"
-    }
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "ancienttweaks:grand_gelatin"
+  },
+  "base": {
+    "item": "ancienttweaks:baroclaw"
   },
   "result": {
     "item": "ancienttweaks:the_absorber"
+  },
+  "template": {
+    "item": "ancienttweaks:giant_tortoise_shell"
   }
 }

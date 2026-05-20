@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cc",
+    "cr"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "r": {
+      "item": "minecraft:nautilus_shell"
+    }
+  },
+  "result": {
+    "item": "ancienttweaks:giant_shell",
+    "count": 1
+  }
+}

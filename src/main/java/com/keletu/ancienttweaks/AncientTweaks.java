@@ -3,6 +3,7 @@ package com.keletu.ancienttweaks;
 import com.keletu.ancienttweaks.event.CapabilityEvents;
 import com.keletu.ancienttweaks.init.ATEffects;
 import com.keletu.ancienttweaks.init.ATItems;
+import com.keletu.ancienttweaks.init.ATTabs;
 import com.keletu.ancienttweaks.packet.ModNetwork;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,7 @@ public class AncientTweaks {
 
         ATItems.ITEMS.register(modEventBus);
         ATEffects.EFFECTS.register(modEventBus);
+        ATTabs.TABS.register(modEventBus);
 
         modEventBus.addListener(CapabilityEvents::registerCapabilities);
         modEventBus.addListener(this::commonSetup);

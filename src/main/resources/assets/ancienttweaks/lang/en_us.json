@@ -50,8 +50,9 @@
   "tooltip.ancienttweaks.theSponge2": "The barrier grants %s%% damage reduction while active",
   "tooltip.ancienttweaks.theSponge3": "The barrier will regenerate %s seconds after being hit.",
   "tooltip.ancienttweaks.theSponge4": "Getting hit resets the timer",
-  "potion.at_crumbling": "Armor Crumbling",
-  "potion.at_cleansing": "Cleansing",
+  "effect.ancienttweaks.crumbling": "Armor Crumbling",
+  "effect.ancienttweaks.cleansing": "Cleansing",
   "itemGroup.tabAncientTweaks": "Ancient Tweaks",
-  "item.waffles_iron.tooltip": "'It's Waffle Time!'"
+  "item.waffles_iron.tooltip": "'It's Waffle Time!'",
+  "creativetab.ancienttweaks": "Ancient Curios"
 }
