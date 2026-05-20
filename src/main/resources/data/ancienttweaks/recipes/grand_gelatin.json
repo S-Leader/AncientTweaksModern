@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "hhh",
+    "bpg",
+    "ddd"
+  ],
+  "key": {
+    "h": {
+      "item": "minecraft:blaze_powder"
+    },
+    "d": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "b": {
+      "item": "ancienttweaks:cleansing_jelly"
+    },
+    "p": {
+      "item": "ancienttweaks:life_jelly"
+    },
+    "g": {
+      "item": "ancienttweaks:vital_jelly"
+    }
+  },
+  "result": {
+    "item": "ancienttweaks:grand_gelatin"
+  }
+}

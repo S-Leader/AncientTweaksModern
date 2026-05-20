@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "ancienttweaks:clam_husk"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dye",
+    "count": 5,
+    "data": 15
+  }
+}

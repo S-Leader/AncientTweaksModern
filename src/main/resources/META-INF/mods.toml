@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[46,)"
+license = "ARR"
+issueTrackerURL = ""
+
+[[mods]]
+modId = "ancienttweaks"
+version = "${file.jarVersion}"
+displayName = "Ancient Tweaks"
+credits = "Ai_myh --> Leader Artist, Designer and mod's Owner; keletu --> Leader Dev and Coder"
+authors = "keletu, Ai_myh"
+logoFile = "logo.png"
+description = "Ancient tweaks mod for keletu's pack"
+
+[[dependencies.ancienttweaks]]
+modId = "forge"
+mandatory = true
+versionRange = "[46,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.ancienttweaks]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20,1.21)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.ancienttweaks]]
+modId = "curios"
+mandatory = true
+versionRange = "[4.0.0,)"
+ordering = "NONE"
+side = "BOTH"

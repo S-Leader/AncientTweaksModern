@@ -1,0 +1,53 @@
+{
+  "parent": "ancienttweaks:item/giant_shell",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        40,
+        -30,
+        -15
+      ],
+      "translation": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        49,
+        -30,
+        15
+      ],
+      "translation": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        8,
+        5,
+        10
+      ],
+      "translation": [
+        -3,
+        0,
+        2.5
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        8,
+        -5,
+        10
+      ],
+      "translation": [
+        -3,
+        0,
+        2.5
+      ]
+    }
+  }
+}

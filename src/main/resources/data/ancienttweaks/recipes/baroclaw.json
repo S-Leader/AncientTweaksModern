@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "crc",
+    "ccc"
+  ],
+  "key": {
+    "c": {
+      "item": "ancienttweaks:depth_cell"
+    },
+    "r": {
+      "item": "ancienttweaks:craw_carapace"
+    }
+  },
+  "result": {
+    "item": "ancienttweaks:baroclaw"
+  }
+}
