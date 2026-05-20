@@ -70,7 +70,5 @@ public class ItemTheSponge extends Item implements ICurioItem {
         tooltip.add(Component.translatable("tooltip.ancienttweaks.theSponge3", AncientTweaksConfig.CONFIG_CALAMITY.theSpongeShieldCooldown.get()).withStyle(ChatFormatting.GOLD));
 
         tooltip.add(Component.translatable("tooltip.ancienttweaks.theSponge4").withStyle(ChatFormatting.GOLD));
-
-        tooltip.add(Component.empty());
     }
 }

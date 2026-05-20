@@ -79,7 +79,5 @@ public class ItemTheAbsorber extends Item implements ICurioItem {
         tooltip.add(Component.translatable("tooltip.ancienttweaks.theAbsorber6").withStyle(ChatFormatting.DARK_PURPLE));
 
         tooltip.add(Component.translatable("tooltip.ancienttweaks.theAbsorber7", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberAbsorb.get() * 100)).withStyle(ChatFormatting.DARK_PURPLE));
-
-        tooltip.add(Component.empty());
     }
 }

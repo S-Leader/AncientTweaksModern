@@ -59,7 +59,5 @@ public class ItemGiantShell extends ShieldItem implements ICurioItem {
         tooltip.add(Component.translatable("tooltip.ancienttweaks.giantShell1", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.giantShellArmor.get())).withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.giantShell2", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.giantShellDashSlowness.get() * 100)).withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.giantShell3", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.giantShellArmor.get() - AncientTweaksConfig.CONFIG_CALAMITY.giantShellWeaknessArmor.get())).withStyle(ChatFormatting.DARK_PURPLE));
-
-        tooltip.add(Component.empty());
     }
 }

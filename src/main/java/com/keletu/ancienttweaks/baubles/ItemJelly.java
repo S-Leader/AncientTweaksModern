@@ -120,8 +120,6 @@ public class ItemJelly extends Item implements ICurioItem {
             tooltip.add(Component.translatable("tooltip.ancienttweaks.grandGelatin3")
                     .withStyle(ChatFormatting.DARK_PURPLE));
         }
-
-        tooltip.add(Component.empty());
     }
 
     @Override

@@ -60,7 +60,5 @@ public class ItemGiantTurtleShell extends ShieldItem implements ICurioItem {
         tooltip.add(Component.translatable("tooltip.ancienttweaks.giantTortoiseShell2").withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.giantTortoiseShell3", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.giantTurtleShellDashSlowness.get() * 100)).withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.giantTortoiseShell4", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.giantTurtleShellArmor.get() - AncientTweaksConfig.CONFIG_CALAMITY.giantTurtleShellWeaknessArmor.get())).withStyle(ChatFormatting.DARK_PURPLE));
-
-        tooltip.add(Component.empty());
     }
 }

@@ -82,8 +82,6 @@ public class ItemBaroClaw extends Item implements ICurioItem {
         tooltip.add(Component.translatable("tooltip.ancienttweaks.baroclaw2", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.baroclawArmorBonus.get() * 100)).withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.baroclaw3").withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.baroclaw4").withStyle(ChatFormatting.DARK_PURPLE));
-
-        tooltip.add(Component.empty());
     }
 
     @SubscribeEvent

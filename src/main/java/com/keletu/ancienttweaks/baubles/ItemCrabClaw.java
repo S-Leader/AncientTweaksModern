@@ -69,8 +69,6 @@ public class ItemCrabClaw extends Item implements ICurioItem {
         tooltip.add(Component.translatable("tooltip.ancienttweaks.crabClaw1", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.crabClawAttackBonus.get() * 100)).withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.crabClaw2").withStyle(ChatFormatting.DARK_PURPLE));
         tooltip.add(Component.translatable("tooltip.ancienttweaks.crabClaw3").withStyle(ChatFormatting.DARK_PURPLE));
-
-        tooltip.add(Component.empty());
     }
 
     @SubscribeEvent

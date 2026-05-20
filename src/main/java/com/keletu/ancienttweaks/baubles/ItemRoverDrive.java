@@ -88,7 +88,5 @@ public class ItemRoverDrive extends Item implements ICurioItem {
         tooltip.add(Component.translatable(
                 "tooltip.ancienttweaks.roverDrive3"
         ).withStyle(ChatFormatting.DARK_GRAY));
-
-        tooltip.add(Component.empty());
     }
 }
