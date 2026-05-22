@@ -1,0 +1,10 @@
+{
+  "type": "ancienttweaks:absorber",
+  "ingredient": {
+    "item": "minecraft:apple"
+  },
+  "result": {
+    "item": "minecraft:slime_ball",
+    "count": 1
+  }
+}

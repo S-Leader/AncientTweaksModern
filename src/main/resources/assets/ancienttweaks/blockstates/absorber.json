@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "duration=0": {
+      "model": "ancienttweaks:block/absorber_empty"
+    },
+    "duration=1": {
+      "model": "ancienttweaks:block/absorber_3"
+    },
+    "duration=2": {
+      "model": "ancienttweaks:block/absorber_2"
+    },
+    "duration=3": {
+      "model": "ancienttweaks:block/absorber"
+    }
+  }
+}

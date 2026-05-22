@@ -1,10 +1,7 @@
 package com.keletu.ancienttweaks;
 
 import com.keletu.ancienttweaks.event.CapabilityEvents;
-import com.keletu.ancienttweaks.init.ATEffects;
-import com.keletu.ancienttweaks.init.ATItems;
-import com.keletu.ancienttweaks.init.ATTabs;
-import com.keletu.ancienttweaks.init.ATLoots;
+import com.keletu.ancienttweaks.init.*;
 import com.keletu.ancienttweaks.packet.ModNetwork;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,8 +20,10 @@ public class AncientTweaks {
     public AncientTweaks() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ATBlocks.BLOCKS.register(modEventBus);
         ATItems.ITEMS.register(modEventBus);
         ATEffects.EFFECTS.register(modEventBus);
+        ATRecipes.RECIPE_SERIALIZERS.register(modEventBus);
         ATLoots.LOOTS.register(modEventBus);
         ATTabs.TABS.register(modEventBus);
 
