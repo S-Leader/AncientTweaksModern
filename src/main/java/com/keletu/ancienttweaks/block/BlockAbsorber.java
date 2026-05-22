@@ -24,7 +24,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -124,14 +123,5 @@ public class BlockAbsorber extends Block {
         }
 
         return drops;
-    }
-
-    @Override
-    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
-        ItemStack stack = new ItemStack(this);
-
-        ItemTheAbsorber.setDuration(stack, state.getValue(DURATION));
-
-        return stack;
     }
 }
