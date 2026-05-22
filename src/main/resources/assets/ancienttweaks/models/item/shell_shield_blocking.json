@@ -1,5 +1,5 @@
 {
-  "parent": "ancienttweaks:item/giant_shell",
+  "parent": "ancienttweaks:item/giant_shell_model",
   "display": {
     "thirdperson_righthand": {
       "rotation": [
