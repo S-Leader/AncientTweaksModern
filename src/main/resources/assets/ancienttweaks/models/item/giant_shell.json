@@ -10,7 +10,7 @@
       "predicate": {
         "blocking": 1
       },
-      "model": "ancienttweaks:item/shell_shield_blocking"
+      "model": "ancienttweaks:item/giant_shell_blocking"
     }
   ]
 }

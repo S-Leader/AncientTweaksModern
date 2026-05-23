@@ -6,6 +6,7 @@ import com.keletu.ancienttweaks.recipe.AbsorberRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -101,7 +102,7 @@ public class BlockAbsorber extends Block {
             duration = stack.getTag().getInt("uses");
         }
 
-        duration = net.minecraft.util.Mth.clamp(duration, 0, BlockAbsorber.MAX_DURATION);
+        duration = Mth.clamp(duration, 0, BlockAbsorber.MAX_DURATION);
 
         return this.defaultBlockState().setValue(DURATION, duration);
     }

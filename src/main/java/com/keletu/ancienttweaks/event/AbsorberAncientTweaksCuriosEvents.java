@@ -66,36 +66,20 @@ public class AbsorberAncientTweaksCuriosEvents {
 
         if (sourceEntity instanceof LivingEntity attacker && directEntity == attacker) {
             if (!event.getSource().is(DamageTypes.THORNS)) {
-                float reflectedDamage = Math.max(
-                        event.getAmount() * AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberReflectDamage.get().floatValue(),
-                        AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberReflectDamageMinimum.get().floatValue()
-                );
+                float reflectedDamage = Math.max(event.getAmount() * AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberReflectDamage.get().floatValue(), AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberReflectDamageMinimum.get().floatValue());
 
-                attacker.hurt(
-                        player.damageSources().thorns(player),
-                        reflectedDamage
-                );
+                attacker.hurt(player.damageSources().thorns(player), reflectedDamage);
 
-                attacker.addEffect(new MobEffectInstance(
-                        ATEffects.CRUMBLING.get(),
-                        AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberWeaknessTime.get() * 20,
-                        1
-                ));
+                attacker.addEffect(new MobEffectInstance(ATEffects.CRUMBLING.get(), AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberWeaknessTime.get() * 20, 1));
 
-                attacker.addEffect(new MobEffectInstance(
-                        MobEffects.WITHER,
-                        AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberWitherTime.get() * 20,
-                        AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberWitherLevel.get() - 1
-                ));
+                attacker.addEffect(new MobEffectInstance(MobEffects.WITHER, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberWitherTime.get() * 20, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberWitherLevel.get() - 1));
             }
         }
 
         if (event.getAmount() >= 0.0F) {
-            float heal = event.getAmount()
-                    * AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberAbsorb.get().floatValue();
+            float heal = event.getAmount() * AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberAbsorb.get().floatValue();
 
-            event.setAmount(event.getAmount()
-                    * (1.0F - AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberAbsorb.get().floatValue()));
+            event.setAmount(event.getAmount() * (1.0F - AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberAbsorb.get().floatValue()));
 
             player.heal(Math.max(0.0F, heal));
         }
@@ -127,58 +111,25 @@ public class AbsorberAncientTweaksCuriosEvents {
             return;
         }
 
-        AreaEffectCloud cloud = createBasePotionCloud(
-                player,
-                3.5F,
-                100,
-                -0.03F
-        );
+        AreaEffectCloud cloud = createBasePotionCloud(player, 3.5F, 100, -0.03F);
 
-        cloud.addEffect(new MobEffectInstance(
-                MobEffects.REGENERATION,
-                AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberRegenerationTime.get() * 20,
-                AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberRegenerationLevel.get() - 1
-        ));
+        cloud.addEffect(new MobEffectInstance(MobEffects.REGENERATION, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberRegenerationTime.get() * 20, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberRegenerationLevel.get() - 1));
 
-        cloud.addEffect(new MobEffectInstance(
-                ATEffects.CLEANSING.get(),
-                1,
-                0
-        ));
+        cloud.addEffect(new MobEffectInstance(ATEffects.CLEANSING.get(), 1, 0));
 
-        cloud.addEffect(new MobEffectInstance(
-                MobEffects.DAMAGE_BOOST,
-                AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberStrengthTime.get() * 20,
-                AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberStrengthLevel.get() - 1
-        ));
+        cloud.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberStrengthTime.get() * 20, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberStrengthLevel.get() - 1));
 
-        cloud.addEffect(new MobEffectInstance(
-                MobEffects.DAMAGE_RESISTANCE,
-                AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberResistanceTime.get() * 20,
-                AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberResistanceLevel.get() - 1
-        ));
+        cloud.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberResistanceTime.get() * 20, AncientTweaksConfig.CONFIG_CALAMITY.theAbsorberResistanceLevel.get() - 1));
 
         player.level().addFreshEntity(cloud);
     }
 
     private static boolean isCurioEquipped(Player player, Item item) {
-        return CuriosApi.getCuriosInventory(player)
-                .map(handler -> handler.findFirstCurio(item).isPresent())
-                .orElse(false);
+        return CuriosApi.getCuriosInventory(player).map(handler -> handler.findFirstCurio(item).isPresent()).orElse(false);
     }
 
-    private static AreaEffectCloud createBasePotionCloud(
-            Player player,
-            float radius,
-            int duration,
-            float radiusPerTick
-    ) {
-        AreaEffectCloud cloud = new AreaEffectCloud(
-                player.level(),
-                player.getX(),
-                player.getY(),
-                player.getZ()
-        );
+    private static AreaEffectCloud createBasePotionCloud(Player player, float radius, int duration, float radiusPerTick) {
+        AreaEffectCloud cloud = new AreaEffectCloud(player.level(), player.getX(), player.getY(), player.getZ());
 
         cloud.setOwner(player);
         cloud.setRadius(radius);

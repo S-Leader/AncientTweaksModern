@@ -106,7 +106,7 @@ public class ItemTheAbsorber extends BlockItem implements ICurioItem {
 
     @Override
     public boolean isBarVisible(ItemStack stack) {
-        return stack.hasTag() && stack.getTag().contains(TAG_DURATION);
+        return stack.hasTag() && stack.getTag().contains(TAG_DURATION) && stack.getTag().getInt(TAG_DURATION) < 3;
     }
 
     @Override

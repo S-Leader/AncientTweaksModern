@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "ancienttweaks:item/giant_shell_item"
+  },
+  "perspectives": {
+    "firstperson_righthand": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    },
+    "firstperson_lefthand": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    },
+    "thirdperson_righthand": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    },
+    "thirdperson_lefthand": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    },
+    "head": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    },
+    "fixed": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    },
+    "ground": {
+      "parent": "ancienttweaks:item/shell_shield_blocking"
+    }
+  }
+}

@@ -35,7 +35,7 @@ public class GiantShellAncientTweaksCuriosEvents {
             return;
         }
 
-        if (isGiantShellEquipped(player)) {
+        if (isGiantShellEquipped(player) && !event.isCanceled()) {
             LAST_HURT_TIME.put(player.getUUID(), player.level().getGameTime());
         }
     }

@@ -35,7 +35,7 @@ public class GiantTurtleShellAncientTweaksCuriosEvents {
             return;
         }
 
-        if (isGiantTurtleShellEquipped(player)) {
+        if (isGiantTurtleShellEquipped(player) && !event.isCanceled()) {
             GIANT_TURTLE_SHELL_LAST_HURT_TIME.put(player.getUUID(), player.level().getGameTime());
         }
     }

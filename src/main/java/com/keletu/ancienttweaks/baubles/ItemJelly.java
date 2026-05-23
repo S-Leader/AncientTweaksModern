@@ -26,8 +26,7 @@ import java.util.UUID;
 
 public class ItemJelly extends Item implements ICurioItem {
 
-    public static final UUID SPEED_UUID =
-            UUID.fromString("CB3F55D3-645C-4F38-A497-ABCDEF100002");
+    public static final UUID SPEED_UUID = UUID.fromString("CB3F55D3-645C-4F38-A497-ABCDEF100002");
 
     public ItemJelly(Properties properties) {
         super(properties);
@@ -43,82 +42,46 @@ public class ItemJelly extends Item implements ICurioItem {
 
         Item item = stack.getItem();
 
-        return CuriosApi.getCuriosInventory(player)
-                .map(handler -> handler.findFirstCurio(item).isEmpty())
-                .orElse(true);
+        return CuriosApi.getCuriosInventory(player).map(handler -> handler.findFirstCurio(item).isEmpty()).orElse(true);
     }
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(
-            SlotContext slotContext,
-            UUID uuid,
-            ItemStack stack
-    ) {
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
 
         if (stack.is(ATItems.greenJelly.get()) || stack.is(ATItems.grandGelatin.get())) {
-            modifiers.put(
-                    Attributes.MOVEMENT_SPEED,
-                    new AttributeModifier(
-                            SPEED_UUID,
-                            "ancienttweaks:movement_speed",
-                            AncientTweaksConfig.CONFIG_CALAMITY.greenJellySpeed.get(),
-                            AttributeModifier.Operation.MULTIPLY_TOTAL
-                    )
-            );
+            modifiers.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(SPEED_UUID, "ancienttweaks:movement_speed", AncientTweaksConfig.CONFIG_CALAMITY.greenJellySpeed.get(), AttributeModifier.Operation.MULTIPLY_TOTAL));
         }
 
         return modifiers;
     }
 
     @Override
-    public void appendHoverText(
-            ItemStack stack,
-            @Nullable Level level,
-            List<Component> tooltip,
-            TooltipFlag flag
-    ) {
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.empty());
 
         if (stack.is(ATItems.blueJelly.get())) {
-            tooltip.add(Component.translatable("tooltip.ancienttweaks.blueJelly1")
-                    .withStyle(ChatFormatting.AQUA));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.blueJelly1").withStyle(ChatFormatting.AQUA));
 
-            tooltip.add(Component.translatable("tooltip.ancienttweaks.blueJelly2")
-                    .withStyle(ChatFormatting.AQUA));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.blueJelly2").withStyle(ChatFormatting.AQUA));
         }
 
         if (stack.is(ATItems.pinkJelly.get())) {
-            tooltip.add(Component.translatable("tooltip.ancienttweaks.pinkJelly1")
-                    .withStyle(ChatFormatting.LIGHT_PURPLE));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.pinkJelly1").withStyle(ChatFormatting.LIGHT_PURPLE));
 
-            tooltip.add(Component.translatable("tooltip.ancienttweaks.pinkJelly2")
-                    .withStyle(ChatFormatting.LIGHT_PURPLE));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.pinkJelly2").withStyle(ChatFormatting.LIGHT_PURPLE));
         }
 
         if (stack.is(ATItems.greenJelly.get())) {
-            tooltip.add(Component.translatable(
-                    "tooltip.ancienttweaks.greenJelly1",
-                    Math.round(AncientTweaksConfig.CONFIG_CALAMITY.greenJellySpeed.get() * 100)
-            ).withStyle(ChatFormatting.GREEN));
-
-            tooltip.add(Component.translatable(
-                    "tooltip.ancienttweaks.greenJelly2",
-                    Math.round(AncientTweaksConfig.CONFIG_CALAMITY.greenJellyJumpHeight.get() * 100)
-            ).withStyle(ChatFormatting.GREEN));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.greenJelly1", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.greenJellySpeed.get() * 100)).withStyle(ChatFormatting.GREEN));
         }
 
         if (stack.is(ATItems.grandGelatin.get())) {
-            tooltip.add(Component.translatable(
-                    "tooltip.ancienttweaks.grandGelatin1",
-                    Math.round(AncientTweaksConfig.CONFIG_CALAMITY.greenJellySpeed.get() * 100)
-            ).withStyle(ChatFormatting.DARK_PURPLE));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.grandGelatin1", Math.round(AncientTweaksConfig.CONFIG_CALAMITY.greenJellySpeed.get() * 100)).withStyle(ChatFormatting.DARK_PURPLE));
 
-            tooltip.add(Component.translatable("tooltip.ancienttweaks.grandGelatin2")
-                    .withStyle(ChatFormatting.DARK_PURPLE));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.grandGelatin2").withStyle(ChatFormatting.DARK_PURPLE));
 
-            tooltip.add(Component.translatable("tooltip.ancienttweaks.grandGelatin3")
-                    .withStyle(ChatFormatting.DARK_PURPLE));
+            tooltip.add(Component.translatable("tooltip.ancienttweaks.grandGelatin3").withStyle(ChatFormatting.DARK_PURPLE));
         }
     }
 
